@@ -1,0 +1,57 @@
+﻿@page
+@model WebApplication1.Pages.Books.UpdateBookModel
+@{
+}
+
+
+<h1>Update book</h1>
+
+<form method="post">
+
+  
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Book Title</label>
+        <input type="text" class="form-control" name="Title" placeholder="enter the book title" value="@Model.book.bookTitle" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Category</label>
+        <input type="text" class="form-control" name="Category" placeholder="enter the category" value="@Model.book.category" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Author</label>
+        <input type="text" class="form-control" name="Author" placeholder="enter the author name" value="@Model.book.author" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Price</label>
+        <input type="text" class="form-control" name="price" placeholder="enter the book price" value="@Model.book.price" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Date of Arrival</label>
+        <input type="date" class="form-control" name="date_arrival" placeholder="enter the date of arrival" value="@Model.book.date_arrival.ToString("yyyy-MM-dd")" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Publish Date</label>
+        <input type="date" class="form-control" name="publish_date" placeholder="enter the publish date" value="@Model.book.publishDate.ToString("yyyy-MM-dd")" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Book Edition</label>
+        <input type="text" class="form-control" name="bookEdition" placeholder="enter the book edition" value="@Model.book.bookEdition" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Rack Number</label>
+        <input type="text" class="form-control" name="rack_num" placeholder="enter the rack number" value="@Model.book.rack_num" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Supplier</label>
+        <input type="text" class="form-control" name="supplier" placeholder="enter the supplier" value="@Model.book.supplier" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Publication</label>
+        <input type="text" class="form-control" name="publication" placeholder="enter the publication" value="@Model.book.publication" required />
+    </div>
+
+    <div class="row mb-3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </div>
+</form>
