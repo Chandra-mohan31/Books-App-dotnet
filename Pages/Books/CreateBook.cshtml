@@ -1,0 +1,85 @@
+﻿@page
+@model WebApplication1.Pages.Books.CreateBookModel
+@{
+}
+
+<h1>Create a Book Here..</h1>
+
+@if(Model.errorMessage.Length > 0)
+{
+    <div class="alert-danger" id="error">
+        <br />
+        @Model.errorMessage
+        <br />
+        <button type="button" class="btn btn-close" onclick="const element = document.getElementById('error'); element.remove();"></button>
+    </div>
+}
+else if(Model.successMessage.Length > 0)
+{
+    <div class="alert-success" id="success">
+        @Model.successMessage
+        <button type="button" class="btn btn-close" onclick="const element = document.getElementById('success'); element.remove();"></button>
+
+    </div>
+}
+
+
+
+<form method="post">
+    <div class="row mb-3">
+        <label class="col-sm-4 col-form-label">Book Code</label>
+        
+        <input type="text" class="form-control sm-8" name="bookCode" value="" placeholder="enter the book code" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Book Title</label>
+        <input type="text" class="form-control" name="Title" placeholder="enter the book title" value="" required/>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Category</label>
+        <input type="text" class="form-control" name="Category" placeholder="enter the category" value="" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Author</label>
+        <input type="text" class="form-control" name="Author" placeholder="enter the author name" value=""required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Price</label>
+        <input type="text" class="form-control" name="price" placeholder="enter the book price" value="" required/>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Date of Arrival</label>
+        <input type="date" class="form-control" name="date_arrival" placeholder="enter the date of arrival" value="" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Publish Date</label>
+        <input type="date" class="form-control" name="publish_date" placeholder="enter the publish date" value="" required/>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Book Edition</label>
+        <input type="text" class="form-control" name="bookEdition" placeholder="enter the book edition" value="" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Rack Number</label>
+        <input type="text" class="form-control" name="rack_num" placeholder="enter the rack number" value="" required />
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Supplier</label>
+        <input type="text" class="form-control" name="supplier" placeholder="enter the supplier" value="" required/>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-12 col-form-label">Publication</label>
+        <input type="text" class="form-control" name="publication" placeholder="enter the publication" value="" required />
+    </div>
+
+    <div class="row mb-3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </div>
+
+
+</form>
+
+<div>
+    <a href="/" class="btn btn-danger">Cancel</a>
+</div>

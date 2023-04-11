@@ -1,0 +1,45 @@
+﻿@page
+@model WebApplication1.Pages.Books.IndexModel
+@{
+}
+
+
+<br />
+
+<div>
+    <a class="btn-primary btn-sm text-decoration-none" href="/Books/CreateBook">Create new Book</a>
+</div>
+<h1>Books List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book Code</th>
+            <th>Book Title</th>
+            <th>Book Category</th>
+            <th>Book Author</th>
+            <th>Book Publication</th>
+            <th>Delete Book</th>
+
+
+        </tr>
+    </thead>
+        <tbody>
+        @foreach(var book in Model.bookList)
+        {
+            <tr>
+                <td>@book.bookCode</td>
+                <td>@book.bookTitle</td>
+                <td>@book.category</td>
+                <td>@book.author</td>
+                <td>@book.publication</td>
+                <td><button class="btn btn-danger">Delete</button></td>
+
+
+
+
+</tr>
+
+        }
+            
+        </tbody>
+</table>
