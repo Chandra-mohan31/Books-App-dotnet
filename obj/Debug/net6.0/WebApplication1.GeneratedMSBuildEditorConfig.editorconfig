@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\DELL\source\repos\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/DELL/source/repos/WebApplication1/Pages/Books/ConfirmAndDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQ29uZmlybUFuZERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DELL/source/repos/WebApplication1/Pages/Books/CreateBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQ3JlYXRlQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,8 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQ3JlYXRpb25TdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/DELL/source/repos/WebApplication1/Pages/Books/FailedMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcRmFpbGVkTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/DELL/source/repos/WebApplication1/Pages/Books/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/source/repos/WebApplication1/Pages/Books/SuccessMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcU3VjY2Vzc01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DELL/source/repos/WebApplication1/Pages/Books/UpdateBook.cshtml]

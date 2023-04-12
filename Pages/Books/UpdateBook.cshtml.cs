@@ -92,16 +92,18 @@ namespace WebApplication1.Pages.Books
                 if (rowsAffected > 0)
                 {
                     //RedirectToPage("Books/Index");
-                    Console.WriteLine("successfully created..");
-                    Response.Redirect("/Books/CreationSuccess");
+                    Console.WriteLine("successfully updated..");
+                    Response.Redirect($"/Books/SuccessMessage?message=succefully updated {bookCodetoUpdate}");
                     //hiddenSucc = true;
 
                 }
                 else
                 {
                     Console.WriteLine("error submitting form");
+                    Response.Redirect($"/Books/FailedMessage?message=Error submiting the form try again");
+
                     //RedirectToPage("Books/CreationFailed");
-                    Response.Redirect("/Books/CreationSuccess");
+
 
                 }
             }
@@ -109,7 +111,7 @@ namespace WebApplication1.Pages.Books
             {
                 Console.WriteLine("Error : " + se.Message);
                 
-                Response.Redirect($"/Books/CreationFailed?error={HttpUtility.UrlEncode(errorMessage)}");
+                Response.Redirect($"/Books/FailedMessage?message={se.Message}");
 
             }
 

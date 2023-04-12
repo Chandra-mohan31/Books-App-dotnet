@@ -41,16 +41,34 @@ namespace WebApplication1.Pages.Books
 
                 Console.WriteLine(b.bookEdition);
                 SqlCommand cmd = conn.CreateCommand();
-                
+
+                //cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                //cmd.Parameters.Add("@book_code", System.Data.SqlDbType.VarChar).Value = b.bookCode;
+                //cmd.Parameters.Add("@book_name", System.Data.SqlDbType.VarChar).Value = b.bookTitle;
+                //cmd.CommandText = "insert_book_details";
+                //int rowsAffected = cmd.ExecuteNonQuery();
+
+                //if (rowsAffected > 0)
+                //{
+                //    //RedirectToPage("Books/Index");
+                //    //Console.WriteLine("successfully created..");
+                //    successMessage = "submitted successfully";
+                //    //Response.Redirect("/Books/CreationSuccess");
+                //    Response.Redirect($"/Books/SuccessMessage?message=Successfully created {b.bookCode}");
+                //    //hiddenSucc = true;
+
+                //}
                 cmd.CommandText = $"Insert into LMS_BOOK_DETAILS Values('{b.bookCode}', '{b.bookTitle}', '{b.category}', '{b.author}', '{b.publication}', '{b.publishDate}', {b.bookEdition}, {b.price}, '{b.rack_num}', '{b.date_arrival}', '{b.supplier}');";
                 int rowsAffected = cmd.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
                 {
                     //RedirectToPage("Books/Index");
-                    Console.WriteLine("successfully created..");
+                    //Console.WriteLine("successfully created..");
                     successMessage = "submitted successfully";
-                    Response.Redirect("/Books/CreationSuccess");
+                    //Response.Redirect("/Books/CreationSuccess");
+                    Response.Redirect($"/Books/SuccessMessage?message=Successfully created {b.bookCode}");
                     //hiddenSucc = true;
 
                 }
@@ -58,7 +76,7 @@ namespace WebApplication1.Pages.Books
                 {
                     Console.WriteLine("error submitting form");
                     //RedirectToPage("Books/CreationFailed");
-                    Response.Redirect("/Books/CreationSuccess");
+
 
                 }
             }
@@ -67,7 +85,7 @@ namespace WebApplication1.Pages.Books
                 Console.WriteLine("Error : " + se.Message);
                 errorMessage = se.Message;
                 hiddenError = true;
-                Response.Redirect($"/Books/CreationFailed?error={HttpUtility.UrlEncode(errorMessage)}");
+                Response.Redirect($"/Books/FailedMessage?message={HttpUtility.UrlEncode(errorMessage)}");
 
             }
 

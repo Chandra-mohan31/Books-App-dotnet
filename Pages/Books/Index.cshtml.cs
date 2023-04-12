@@ -67,5 +67,16 @@ namespace WebApplication1.Pages.Books
             }
 
         }
+        public void OnDeleteButtonClick(string toDeleteBookCode)
+        {
+            string connString = "Data Source=F48DPF2;Initial Catalog=LMS_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = $"DELETE FROM LMS_BOOK_DETAILS WHERE BOOK_CODE = {toDeleteBookCode}";
+            int rowsAffected = cmd.ExecuteNonQuery();
+            Console.WriteLine(rowsAffected);
+          
+        }
     }
 }
